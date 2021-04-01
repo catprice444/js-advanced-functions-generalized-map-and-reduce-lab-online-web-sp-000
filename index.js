@@ -10,8 +10,11 @@ function map(array, callback) {
 function reduce(array, callback, startingPoint) {
     let x = !!startingPoint ? startingPoint : array[0];
     let i = !!startingPoint ? 0 : 1;
+    
     for(; i < array.length; i++){
         x = callback(array[i], x);
     }
+
     return x;
 }
+
